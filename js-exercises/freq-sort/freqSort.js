@@ -1,17 +1,17 @@
-function freqSort(elementArray) {
-  const elementFrequency = {};
+function freqSort(elArray) {
+  const elFrequency = {};
 
-  for (const element of elementArray) {
-    if (elementFrequency[element]) {
-      elementFrequency[element] += 1;
+  for (const el of elArray) {
+    if (elFrequency[el]) {
+      elFrequency[el] += 1;
     } else {
-      elementFrequency[element] = 1;
+      elFrequency[el] = 1;
     }
   }
 
-  const frequencyKeys = Object.keys(elementFrequency);
+  const frequencyKeys = Object.keys(elFrequency);
   const sortedKeys = frequencyKeys.sort(function (a, b) {
-    return elementFrequency[a] - elementFrequency[b];
+    return elFrequency[a] - elFrequency[b];
   });
 
   return sortedKeys.reverse();
