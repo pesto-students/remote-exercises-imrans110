@@ -1,0 +1,3 @@
+function* Cycled() {}
+
+export { Cycled };
