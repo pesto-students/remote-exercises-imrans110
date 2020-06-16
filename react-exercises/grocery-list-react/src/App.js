@@ -1,9 +1,8 @@
 import React, { useState } from "react";
 
-import AddItem from "./AddItem";
-import ListItem from "./ListItem";
+import AddItem from "./components/AddItem/AddItem";
+import ListItem from "./components/ListItem/ListItem";
 
-import logo from "./logo.svg";
 // import "./App.css";
 
 function App() {
@@ -12,8 +11,8 @@ function App() {
   return (
     <div className="App">
       <header className="App-header"></header>
-      <AddItem setGroceryList={setGroceryList} />
-      <ListItem groceryList={groceryList} />
+      <AddItem groceryList={groceryList} setGroceryList={setGroceryList} />
+      <ListItem groceryList={groceryList} setGroceryList={setGroceryList} />
     </div>
   );
 }
