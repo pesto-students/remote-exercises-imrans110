@@ -1,4 +1,5 @@
 import React from "react";
+import "./ListItem.css";
 
 const ListItem = ({ groceryList, setGroceryList }) => {
   const handItemClick = (index) => {
@@ -16,6 +17,7 @@ const ListItem = ({ groceryList, setGroceryList }) => {
     <ul>
       {groceryList.map((item, index) => (
         <li
+          className="card"
           onClick={() => handItemClick(index)}
           style={{
             color: item.purchaseStatus ? "red" : "black",
@@ -23,10 +25,12 @@ const ListItem = ({ groceryList, setGroceryList }) => {
           }}
           key={index}
         >
-          {item.name}{" "}
-          <span>
-            <b>{item.count}</b>
-          </span>
+          <div>
+            {item.name}{" "}
+            <span>
+              <b>{item.count}</b>
+            </span>
+          </div>
         </li>
       ))}
     </ul>
